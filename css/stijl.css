@@ -1,0 +1,556 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    box-sizing: border-box;
+}
+
+article, aside, figcaption, figure, footer, header, main, nav, section { 
+    display: block;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    overflow: hidden;
+    height: 100%;
+}
+
+section {
+    position: relative;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    height: 1080px;
+    background-position: center;
+    overflow: hidden;
+}
+
+.homeimg {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.cursor {
+    z-index: 9999;
+    background: rgba(173, 183, 158, 0.5);
+    width: 20px; 
+    height: 20px;
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 4px rgba(173, 183, 158, 0.8);
+}
+.interactive-map-container {
+    position: relative; /* This is necessary for absolute positioning of overlay items inside */
+    width: 100%;
+    height: 100vh; /* Use full height of the viewport */
+    overflow: hidden; /* Hide anything outside the container */
+}
+
+.interactive-map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: grab;
+    will-change: transform;
+    transform-origin: center;
+    transition: transform 0.1s ease-out ;
+  
+}
+
+.overlay-icon, .overlay-icon2, .overlay-item1 {
+    position: fixed;
+    pointer-events: auto;
+    z-index: 1000;
+}
+
+.overlay-icon {
+    bottom: 20px;   
+    right: 20px;    
+    width: 50px;    
+    height: auto;
+    cursor: pointer;
+}
+.overlay-icon:hover {
+    -webkit-transform: rotate(360deg) translateZ(0);
+    transition: transform 1s ease;
+}
+
+.overlay-roepteken {
+    bottom: 80px;   
+    right: 25px;    
+    width: 40px;    
+    height: auto;
+    position: fixed;
+    z-index: 1000;
+    animation: jump 0.5s ease-out 20 alternate, disappear 20s ease forwards; /* Easier ease-out */
+}
+
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Adjust height of the jump */
+    }
+}
+
+/* Animation to fade out and hide the element after 10 seconds */
+@keyframes disappear {
+    100% {
+        opacity: 0;
+        visibility: hidden; /* The element disappears after 10 seconds */
+    }
+}
+
+/* bot bot bot */
+
+
+.overlay-item1 {
+    position: absolute;
+    top: 470px;   
+    right: -160px;    
+    width:155px;    
+    height: auto;
+    pointer-events: auto; 
+    z-index: 1000; 
+    transition: none;
+}
+
+
+/* bot bot end */ 
+
+.overlay-icon2 {
+    position: fixed;
+    bottom: -17px;   
+    left: -15px;    
+    width: 350px;    
+    height: auto;
+    opacity: 1;
+    pointer-events: auto;
+ 
+}
+
+.overlay-icon2:hover {
+    opacity: 1; 
+}
+
+/* cow cow */
+
+.overlay-item3{
+    position: absolute;
+    bottom: 500px;   
+    right: 350px;    
+    width: 50px;    
+    height: auto;
+    pointer-events: auto; 
+    z-index: 1000;
+}
+
+.overlay-item4{
+    position: absolute;
+    bottom: -400px;   
+    right: -50px;    
+    width: 140px;    
+    height: auto;
+    pointer-events: auto; 
+    z-index: 1000;
+}
+.overlay-item5{
+    position: absolute;
+    bottom: 3px;   
+    right: 340px;    
+    width: 50px;    
+    height: auto;
+    pointer-events: auto; 
+    z-index: 1000;
+}
+
+/* cow cow end */
+
+/* hay hay hay */
+
+.overlay-item6{
+    position: absolute;
+    bottom:-250px;   
+    left: 555px;    
+    width: 120px;    
+    height: auto;
+    pointer-events: auto; 
+    z-index: 1000;
+}
+.overlay-item7{
+    position: absolute;
+    bottom: 410px;   
+    right: 780px;    
+    width: 70px;    
+    height: auto;
+    pointer-events: auto; 
+    z-index: 1000;
+}
+.overlay-item8{
+    position: absolute;
+    bottom: 410px;   
+    right: 770px;    
+    width: 50px;    
+    height: auto;
+    pointer-events: auto; 
+    z-index: 1000;
+}
+
+/* monument 1 --------------------------*/
+
+.image-container {
+    position: relative;
+    width: 100%;  
+    height: 100vh;  
+}
+
+/* The battle map image */
+.battle-map {
+    width: 100%; 
+    height: auto;
+    display: block; 
+}
+.battle-map2 {
+    width: 110%;             
+    height: auto;            
+    object-fit: cover;       
+    object-position: 50% -250px;
+}
+.battle-map4 {
+    width: 110%;             
+    height: auto;            
+    object-fit: cover;       
+    object-position: 50% 0px;
+}
+.battle-map5 {
+    width: 100%;             
+    height: auto;            
+    object-fit: cover;       
+    object-position: 50% 0px 
+}
+
+.battle-map6 {
+    width: 130%;             
+    height: auto;            
+    object-position: 50% 0px;
+    display: block;
+    margin: 0;
+   
+}
+.battle-map7 {
+    width: 100%;             
+    height: auto;            
+    object-fit: cover;       
+    object-position: 50% -40px;
+   
+}
+
+
+
+/* Soldier image positioned over the battle map */
+
+.overlay-person1 {
+    position: fixed;
+    bottom: -70px; 
+    right:-80px;  
+    width: 40%;  
+    height: auto;  
+    z-index: 2;  
+}
+
+/* arrow arrow */
+
+.overlay-arrow {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    width: 50px; 
+    height: auto;
+    z-index: 10; 
+    cursor: pointer; 
+}
+.overlay-arrow:hover {
+    -webkit-transform: rotate(360deg) translateZ(0);
+    transition: transform 1s ease;
+}
+
+/* cursor piece 1 ------------*/
+
+.monument1 {
+    cursor: none; 
+    position: relative;
+}
+
+.cursor2 {
+    z-index: 9999;
+    background: rgba(173, 183, 158, 0.5);
+    width: 20px; 
+    height: 20px;
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 4px rgba(173, 183, 158, 0.8);
+}
+
+/*-------------------------*/
+
+.overlay-item9{
+    position: absolute;
+    top: 500px;   
+    left: 190px;    
+    width: 150px;    
+    height: auto;
+    pointer-events: auto; 
+    z-index: 1000;
+}
+
+.overlay-item10{
+    position: absolute;
+    top: 180px;   
+    left: 230px;    
+    width: 50px;    
+    height: auto;
+    pointer-events: auto; 
+    z-index: 1000;
+}
+.overlay-item11{
+    position: absolute;
+    top: 190px;   
+    left: 210px;    
+    width: 50px;    
+    height: auto;
+    pointer-events: auto; 
+    z-index: 1000;
+}
+
+/*-----------------*/
+
+
+.overlay-item12{
+    position: absolute;
+    top:355px;   
+    left: 675px;    
+    width: 150px;    
+    height: auto;
+    pointer-events: auto; 
+    z-index: 1000;
+}
+.overlay-item13{
+    position: absolute;
+    top: 440px;   
+    left: 610px;    
+    width: 50px;    
+    height: auto;
+    pointer-events: auto; 
+    z-index: 1000;
+}
+.overlay-item14{
+    position: absolute;
+    top: 420px;   
+    left: 630px;    
+    width: 40px;    
+    height: auto;
+    pointer-events: auto; 
+    z-index: 1000;
+}
+
+/*---------------------------*/
+
+.overlay-item15{
+    position: absolute;
+    top: 155px;   
+    right: 404px;    
+    width: 110px;    
+    height: auto;
+    pointer-events: auto; 
+    z-index: 1000;
+}
+
+/*--------------------------*/
+
+.overlay-item16{
+    position: absolute;
+    top: 495px;   
+    right:580px;    
+    width: 90px;    
+    height: auto;
+    pointer-events: auto; 
+    z-index: 1000;
+}
+.overlay-item17{
+    position: absolute;
+    bottom: 230px;   
+    left: 660px;    
+    width: 50px;    
+    height: auto;
+    pointer-events: auto; 
+    z-index: 1000;
+}
+.overlay-item18{
+    position: absolute;
+    bottom: 250px;   
+    left: 640px;    
+    width: 60px;    
+    height: auto;
+    pointer-events: auto; 
+    z-index: 1000;
+}
+
+/* boer boer-----------------*/
+
+.overlay-person2 {
+    position: fixed;
+    bottom: -70px; 
+    right:-80px;  
+    width: 40%;  
+    height: auto;  
+    z-index: 2;  
+}
+
+/* cursor 3 -------------*/
+
+.monument2 {
+    cursor: none; 
+    position: relative;
+}
+
+.cursor3 {
+    z-index: 9999;
+    background: rgba(173, 183, 158, 0.5);
+    width: 20px; 
+    height: 20px;
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 4px rgba(173, 183, 158, 0.8);
+}
+
+
+.monument3 {
+    cursor: none; 
+    position: relative;
+}
+
+.cursor4 {
+    z-index: 9999;
+    background: rgba(173, 183, 158, 0.5);
+    width: 20px; 
+    height: 20px;
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 4px rgba(173, 183, 158, 0.8);
+}
+
+.monument4 {
+    cursor: none; 
+    position: relative;
+}
+
+.cursor5 {
+    z-index: 9999;
+    background: rgba(173, 183, 158, 0.5);
+    width: 20px; 
+    height: 20px;
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 4px rgba(173, 183, 158, 0.8);
+}
+
+.monument5 {
+    cursor: none; 
+    position: relative;
+}
+
+.cursor6 {
+    z-index: 9999;
+    background: rgba(173, 183, 158, 0.5);
+    width: 20px; 
+    height: 20px;
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 4px rgba(173, 183, 158, 0.8);
+}
+
+.monument6 {
+    cursor: none; 
+    position: relative;
+}
+
+.cursor7 {
+    z-index: 9999;
+    background: rgba(173, 183, 158, 0.5);
+    width: 20px; 
+    height: 20px;
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 4px rgba(173, 183, 158, 0.8);
+}
+
+.monument7 {
+    cursor: none; 
+    position: relative;
+}
+
+.cursor8 {
+    z-index: 9999;
+    background: rgba(173, 183, 158, 0.5);
+    width: 20px; 
+    height: 20px;
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 4px rgba(173, 183, 158, 0.8);
+}
+/*-------audio --------------*/
+
+/*audio*/
+.song{
+    position: fixed;
+    bottom: 65px;
+    right: 400px;
+    z-index: 3;
+}
+
+button{
+    font-family: 'Pixel Gamer Personal use', sans-serif;
+    padding: 10px;
+    background: rgba(173, 183, 158, 0.4);
+    color: #3c3932;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+
+}
+button:hover {
+    background-color: ;
+    color: white;
+}
+
+.song button {
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0px;
+}
+
+iframe {
+    display: block;
+    width: 100%;
+    height: 40vw;
+}
+
+--------------
+
+

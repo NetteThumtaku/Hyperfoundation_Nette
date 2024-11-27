@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <title>Hyperfoundation</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/stijl.css">
+
+    <!-- SMOOTH SCROLL -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(function() {
+          $('a[href*=#]:not([href="#"])').click(function() {
+            if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
+                $('html, body').animate({
+                  scrollTop: target.offset().top
+                }, 1000);
+                return false;
+              }
+            }
+          });
+        });
+    </script>
+</head>
+<body>
+<main>
+    <section class="homeimg">
+
+        <!-- Custom Cursor -->
+        <div class="cursor"></div>
+
+        <!-- Interactive Map Container -->
+        <div class="interactive-map-container">
+            <!-- Map Image (this is the movable image) -->
+            <img src="images/mapre_.jpg" class="interactive-map" alt="Interactieve Kaart">
+
+        
+            <img src="images/wiel.png" class="overlay-icon" alt="Wiel" onclick="playAudio()">
+
+            <audio id="demo" src="audio/audio_guide.mp3"></audio>
+
+            <img src="images/ex.png" class="overlay-roepteken" alt="!">
+
+            <!-- Monumenten Deel 1 -->
+            <a href="monument1.html">
+                <img src="images/machines.png" class="overlay-item1 overlay-items" alt="object">
+            </a>
+
+            
+
+            <!-- Monumenten Deel 2 -->
+            <a href="monument2.html">
+                <img src="images/cows_groep1.png" class="overlay-item4 overlay-items" alt="object">
+            </a>
+           
+            <!-- Monumenten Deel 3 -->
+            <a href="monument3.html">
+                <img src="images/hays.png" class="overlay-item6 overlay-items" alt="hay">
+            </a>
+
+           
+            <!-- Monumenten Deel 4 -->
+            <a href="monument4.html">
+                <img src="images/trees.png" class="overlay-item9 overlay-items" alt="tree">
+            </a>
+
+
+            <!-- Monumenten Deel 5 -->
+             <a href="monument5.html">
+                <img src="images/tenten.png" class="overlay-item12 overlay-items" alt="tent">
+            </a>
+
+            
+
+            <!-- Monumenten Deel 6 -->
+            <a href="monument6.html">
+                <img src="images/animals.png" class="overlay-item15 overlay-items" alt="animal">
+            </a>
+
+
+            <!-- Monumenten Deel 7 -->
+            <a href="monument7.html">
+                <img src="images/cowcow.png" class="overlay-item16 overlay-items" alt="cow">
+            </a>
+
+        </div>
+    </section>
+</main>
+
+
+<footer>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
